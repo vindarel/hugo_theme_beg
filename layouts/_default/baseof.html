@@ -85,8 +85,9 @@
     <!-- <script>hljs.initHighlightingOnLoad();</script> -->
     <script src="{{ .Site.BaseURL}}js/highlight-lisp.js"></script>
     <script>
-      <!-- HighlightLisp.highlight_auto({className: null}); -->
-      HighlightLisp.highlight_auto({className: "language-lisp"});
+      HighlightLisp.highlight_auto({className: null});
+      <!-- HighlightLisp.highlight_auto({className: "language-lisp"}); -->
+      <!-- locally it's language-lisp, on gitlab.io language-common-lisp… -->
       HighlightLisp.paren_match();
       console.log("highlight lisp please");
     </script>
