@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
     {{ end }}
 
+    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL}}css/dark.css"> -->
+    <!-- dark has some conflicts and is not readable :( -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL}}css/github.css">
+
   </head>
 
   <body>
@@ -77,8 +81,14 @@
 
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script> -->
+    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+    <script src="{{ .Site.BaseURL}}js/highlight-lisp.js"></script>
+    <script>
+      <!-- HighlightLisp.highlight_auto({className: null}); -->
+      HighlightLisp.highlight_auto({className: "language-lisp"});
+      HighlightLisp.paren_match();
+      console.log("highlight lisp please");
+    </script>
   </body>
 </html>
-
