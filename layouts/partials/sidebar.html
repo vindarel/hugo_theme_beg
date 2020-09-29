@@ -18,7 +18,7 @@
       <div class="panel-title">{{ $key | singularize | upper }}</div>
     </div>
     <div class="list-group">
-      {{ range first 10 $value.ByCount }}
+      {{ range first 15 $value.ByCount }}
       <a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}" class="list-group-item">{{ .Name }}</a>
       {{ end }}
     </div>
@@ -26,4 +26,3 @@
   {{ end }}
 
 </aside>
-
